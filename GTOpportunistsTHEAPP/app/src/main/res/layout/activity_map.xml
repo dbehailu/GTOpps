@@ -27,27 +27,17 @@
         android:background="#b3a369"
         app:menu="@menu/my_navigation_items" />
 
-
-    <!--<android.support.design.widget.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--android:id="@+id/navigation"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="56dp"-->
-    <!--android:layout_gravity="bottom|end"-->
-    <!--android:background="#b3a369"-->
-    <!--app:menu="@menu/my_navigation_items" />-->
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="116dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_marginTop="15dp"-->
-        <!--android:layout_marginEnd="15dp"-->
-        <!--android:clickable="true"-->
-        <!--android:src="@drawable/ic_add_black_24dp"-->
-        <!--tools:src="@drawable/ic_add_black_24dp" />-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="78dp"
+        android:clickable="true"
+        android:src="@drawable/ic_add_black_24dp"
+        tools:src="@drawable/ic_add_black_24dp" />
 
 
 </RelativeLayout>
