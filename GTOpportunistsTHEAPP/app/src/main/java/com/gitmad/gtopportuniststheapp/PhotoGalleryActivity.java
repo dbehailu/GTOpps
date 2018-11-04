@@ -23,7 +23,7 @@ public class PhotoGalleryActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 System.out.println(item.toString());
-                if (item.toString().equals("Camera")) {
+                if (item.toString().equals("Add")) {
                     startActivity(new Intent(PhotoGalleryActivity.this, MapActivity.class));
                 } else if (item.toString().equals("Profile")) {
                     startActivity(new Intent(PhotoGalleryActivity.this, ProfileActivity.class));

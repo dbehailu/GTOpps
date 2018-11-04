@@ -23,9 +23,9 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        profile_image = findViewById(R.id.profile_photo);
-        name = findViewById(R.id.name);
-        numPhotos = findViewById(R.id.description);
+//        profile_image = findViewById(R.id.profile_photo);
+//        name = findViewById(R.id.name);
+//        numPhotos = findViewById(R.id.description);
 
         navBar = findViewById(R.id.navigation);
 
@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 System.out.println(item.toString());
-                if (item.toString().equals("Camera")) {
+                if (item.toString().equals("Add")) {
                     startActivity(new Intent(ProfileActivity.this, MapActivity.class));
                 } else if (item.toString().equals("Home")) {
                     startActivity(new Intent(ProfileActivity.this, PhotoGalleryActivity.class));
