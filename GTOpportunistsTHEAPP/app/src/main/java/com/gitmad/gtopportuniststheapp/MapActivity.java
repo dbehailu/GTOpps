@@ -28,30 +28,29 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-//        navBar = findViewById(R.id.navigation);
-//
-//        navBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                System.out.println(item.toString());
-//                if (item.toString().equals("Profile")) {
-//                    startActivity(new Intent(MapActivity.this, ProfileActivity.class));
-//                } else if (item.toString().equals("Home")) {
-//                    startActivity(new Intent(MapActivity.this, PhotoGalleryActivity.class));
-//                }
-//                // handle desired action here
-//                // One possibility of action is to replace the contents above the nav bar
-//                // return true if you want the item to be displayed as the selected item
-//                return true;
-//            }
-//        });
+        navBar = findViewById(R.id.navigation);
+
+        navBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                System.out.println(item.toString());
+                if (item.toString().equals("Profile")) {
+                    startActivity(new Intent(MapActivity.this, ProfileActivity.class));
+                } else if (item.toString().equals("Home")) {
+                    startActivity(new Intent(MapActivity.this, PhotoGalleryActivity.class));
+                }
+                // handle desired action here
+                // One possibility of action is to replace the contents above the nav bar
+                // return true if you want the item to be displayed as the selected item
+                return true;
+            }
+        });
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
 
     /**
      * Manipulates the map once available.
