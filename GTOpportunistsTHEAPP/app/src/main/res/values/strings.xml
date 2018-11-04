@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">GT Opportunists: THE APP</string>
     <string name="title_activity_map">Map</string>
+    <string name="add_an_item"><u>Add An Item</u></string>
+    <string name="create">Create</string>
+    <string name="description">Enter Description Here</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
 </resources>

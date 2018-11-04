@@ -1,15 +1,13 @@
 package com.gitmad.gtopportuniststheapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -28,6 +26,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
+        FloatingActionButton fab = findViewById(R.id.fab);
+
         navBar = findViewById(R.id.navigation);
 
         navBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -43,6 +43,14 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 // One possibility of action is to replace the contents above the nav bar
                 // return true if you want the item to be displayed as the selected item
                 return true;
+            }
+        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MapActivity.this, AddActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -65,9 +73,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //Map Markers
+        LatLng gt = new LatLng(33.777620,-84.396281);
+        LatLng gt2 = new LatLng( 33.774103, -84.398823);
+        LatLng gt3 = new LatLng( 33.7774, -84.3973);
+        LatLng gt4 = new LatLng( 33.7736,-84.3964);
+        LatLng gt5 = new LatLng(33.7749,-84.3964);
+        mMap.addMarker(new MarkerOptions().position(gt).title("My Current Location"));
+        mMap.addMarker(new MarkerOptions().position(gt2).title("Student Center"));
+        mMap.addMarker(new MarkerOptions().position(gt3).title("College of Computing"));
+        mMap.addMarker(new MarkerOptions().position(gt4).title("Skiles Walkway"));
+        mMap.addMarker(new MarkerOptions().position(gt5).title("Clough Undergraduate Learning Commons"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(gt));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(11.0f));
     }
 }
