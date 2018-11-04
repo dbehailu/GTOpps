@@ -75,19 +75,19 @@ public class PhotoGalleryActivity extends AppCompatActivity {
         //Pin Database Stuff
         pinDatabase.add(new Pin("Free Pizza!", "There's free pizza in the CULC",
                 33.7749, 84.3964, 14, 15, "AndyBoi",
-                0, 0));
+                9, 0));
 
         pinDatabase.add(new Pin("Google Swag", " ~ Free swag in CoC lobby ~",
                 33.7774, 84.3973, 15, 17, "Peter Parker",
-                0, 0));
+                6, 2));
 
         pinDatabase.add(new Pin("Free Coffee", "Come by Skiles Walkway!!!",
                 33.7740, 84.3973, 11, 12, "Avril Lavigne",
-                0, 0));
+                4, 1));
 
         pinDatabase.add(new Pin("Free Chick-fil-A", "8-Count Nugget Meal",
                 33.7740, 84.3988, 12, 13, "Adam Shoji",
-                0, 0));
+                1, 8));
 
     }
 

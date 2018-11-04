@@ -8,7 +8,7 @@
     android:paddingRight="8dp"
     android:paddingLeft="8dp">
 
-    <TextView
+    <EditText
         android:id="@+id/title"
         android:layout_width="231dp"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_margin="5dp"
         android:padding="8dp"
         android:hint="@string/description"
-        android:inputType="date"/>
+        android:inputType="none"/>
 
     <ImageView
         android:id="@+id/ivLatitude"
@@ -78,7 +78,7 @@
         android:padding="8dp"
         android:layout_margin="5dp"
         android:hint="@string/latitude"
-        android:inputType="none"/>
+        android:inputType="numberDecimal"/>
 
     <ImageView
         android:id="@+id/ivLongitude"
@@ -98,7 +98,7 @@
         android:padding="8dp"
         android:layout_margin="5dp"
         android:hint="@string/longitude"
-        android:inputType="none"/>
+        android:inputType="numberDecimal"/>
 
     <ImageView
         android:id="@+id/ivStartTime"
@@ -125,7 +125,8 @@
         android:layout_below="@+id/ivStartTime"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:hint="End Time"/>
+        android:hint="End Time"
+        android:inputType="number"/>
 
 
     <EditText
@@ -135,7 +136,8 @@
         android:layout_below="@+id/tvLongitude"
         android:layout_centerHorizontal="true"
         android:layout_margin="5dp"
-        android:hint="Start Time"/>
+        android:hint="Start Time"
+        android:inputType="number"/>
 
     <ImageView
         android:id="@+id/ivUser"
@@ -153,7 +155,8 @@
         android:layout_below="@+id/tvEndTime"
         android:layout_centerHorizontal="true"
         android:layout_margin="5dp"
-        android:hint="Username" />
+        android:hint="Username"
+        android:inputType="none"/>
 
     <Button
         android:id="@+id/btnDone"
