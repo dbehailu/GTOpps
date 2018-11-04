@@ -40,7 +40,7 @@
             android:layout_width="103dp"
             android:layout_height="111dp"
             android:padding="15dp"
-            android:src="@drawable/ic_format_align_justify_black_24dp" />
+            app:srcCompat="@drawable/fanu" />
 
         <TextView
             android:id="@+id/tvName"
