@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class ProfileActivity extends AppCompatActivity {
@@ -35,11 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 System.out.println(item.toString());
                 if (item.toString().equals("Camera")) {
-                    Toast.makeText(ProfileActivity.this, "The camera function is not implemented!",
-                            Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(ProfileActivity.this, MapActivity.class));
                 } else if (item.toString().equals("Home")) {
-                    Intent newIntent = new Intent(ProfileActivity.this, PhotoGalleryActivity.class);
-                    startActivity(newIntent);
+                    startActivity(new Intent(ProfileActivity.this, PhotoGalleryActivity.class));
                 }
                 // handle desired action here
                 // One possibility of action is to replace the contents above the nav bar
