@@ -7,31 +7,48 @@
     tools:context=".ProfileActivity">
 
     <RelativeLayout
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="229dp"
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@+id/tvTravelTipsHeader"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tvYouFollow"
+            android:layout_width="112dp"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivFollowers"
+            android:layout_toEndOf="@+id/tv10"
+            android:text="Follow You" />
+
+        <Switch
+            android:id="@+id/button2"
+            android:layout_width="90dp"
+            android:layout_height="44dp"
             android:layout_alignBottom="@+id/textView8"
-            android:layout_centerHorizontal="true"
-            android:text="Food" />
+            android:layout_alignEnd="@+id/tvHandle"
+            android:text="FOOD" />
 
         <ImageView
             android:id="@+id/ivProfile"
-            android:layout_width="89dp"
-            android:layout_height="83dp"
-            android:layout_alignEnd="@id/ivProfile"
-            android:src="@drawable/ic_person_black_24dp" />
+            android:layout_width="103dp"
+            android:layout_height="111dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_format_align_justify_black_24dp" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/ivProfile"
-            android:layout_toEndOf="@id/ivProfile"
             android:layout_margin="10dp"
+            android:layout_toEndOf="@id/ivProfile"
             android:text="Fanu" />
 
         <TextView
@@ -74,8 +91,8 @@
             android:id="@+id/tvFollowing"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_alignEnd="@+id/cancun"
             android:layout_alignTop="@+id/ivFollowers"
+            android:layout_toStartOf="@+id/tv10"
             android:src="@drawable/ic_person_black_24dp" />
 
         <TextView
@@ -90,8 +107,8 @@
             android:id="@+id/tv10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/cancun"
             android:layout_alignTop="@+id/ivFollowers"
-            android:layout_toEndOf="@+id/tvFollowing"
             android:text=" 10 "
             android:textStyle="bold" />
 
@@ -112,9 +129,9 @@
             android:layout_marginTop="140dp"
             android:background="?android:attr/listDivider" />
 
-        <Button
+        <ImageView
             android:id="@+id/button"
-            android:layout_width="229dp"
+            android:layout_width="234dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider"
             android:layout_centerHorizontal="true"
@@ -131,21 +148,21 @@
             android:layout_marginTop="15dp"
             android:src="@drawable/ic_person_black_24dp" />
 
-        <TextView
+        <Switch
             android:id="@+id/favDest"
-            android:layout_width="176dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/cancun"
-            android:layout_alignStart="@+id/button"
-            android:text=""
+            android:layout_width="90dp"
+            android:layout_height="44dp"
+            android:layout_alignBottom="@+id/favDestIcon"
+            android:layout_alignEnd="@+id/tvHandle"
+            android:text="Swag"
             android:textAllCaps="true" />
 
         <TextView
             android:id="@+id/cancun"
             android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/favDestIcon"
-            android:layout_alignStart="@id/favDest"
+            android:layout_height="5dp"
+            android:layout_alignStart="@+id/button2"
+            android:layout_below="@+id/favDestIcon"
             android:text=""
             android:textAllCaps="false" />
 
@@ -162,8 +179,9 @@
             android:id="@+id/btnSignout"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_below="@+id/tvTravelTips"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="73dp"
             android:text="Sign Out"
             android:textAllCaps="false" />
 
@@ -182,15 +200,15 @@
             android:layout_height="45dp"
             android:layout_alignStart="@id/favDestIcon"
             android:layout_below="@id/favDest"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/ic_person_black_24dp" />
 
         <TextView
             android:id="@+id/tvTravelTipsHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ivLastVoyage"
             android:layout_alignStart="@id/favDestIcon"
+            android:layout_below="@id/ivLastVoyage"
             android:layout_marginTop="15dp"
             android:text=""
             android:textSize="14sp"
@@ -222,6 +240,21 @@
             app:layout_constraintVertical_bias="1.0"
             app:menu="@menu/my_navigation_items" />
 
+        <TextView
+            android:id="@+id/tvFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivFollowers"
+            android:layout_toEndOf="@+id/followes"
+            android:text="Following" />
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/divider2">
+
+        </ListView>
     </RelativeLayout>
 
 </FrameLayout>
